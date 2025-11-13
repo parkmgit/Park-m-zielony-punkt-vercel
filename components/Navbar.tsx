@@ -189,6 +189,14 @@ export default function Navbar() {
               </button>
             )}
 
+            {/* User Info Mobile */}
+            {currentUser && (
+              <div className="flex flex-col items-center gap-1 px-3 py-2 bg-gray-100 dark:bg-slate-700 rounded-full min-w-fit">
+                <User className="w-5 h-5 text-[#22c55e]" strokeWidth={1.5} />
+                <span className="text-xs text-gray-700 dark:text-slate-300">{currentUser.name.split(' ')[0]}</span>
+              </div>
+            )}
+
             {/* Logout Button Mobile */}
             {currentUser && (
               <button

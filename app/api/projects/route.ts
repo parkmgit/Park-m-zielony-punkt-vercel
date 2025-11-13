@@ -16,10 +16,11 @@ export async function GET() {
       ORDER BY p.created_at DESC
     `);
 
-    return NextResponse.json(result);
+    return NextResponse.json(result || []);
   } catch (error) {
     console.error('Error fetching projects:', error);
-    return NextResponse.json({ error: 'Failed to fetch projects' }, { status: 500 });
+    // Zwróć pustą tablicę zamiast obiektu z błędem
+    return NextResponse.json([], { status: 500 });
   }
 }
 

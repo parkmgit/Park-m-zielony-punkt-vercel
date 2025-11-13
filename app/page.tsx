@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { TreePine, List, MapPin } from 'lucide-react';
+import { TreePine, List, MapPin, FolderPlus, Leaf } from 'lucide-react';
 
 // Configure Lucide icons to be thinner
 const iconProps = {
@@ -39,7 +39,7 @@ export default function Home() {
           <p className="text-lg text-gray-600 dark:text-slate-300">System Ewidencji Drzew Grupy Park M</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <Link href="/add-tree">
             <div className="bg-white dark:bg-slate-800/80 dark:backdrop-blur rounded-[2rem] shadow-lg dark:shadow-[0_0_30px_rgba(34,197,94,0.5)] p-8 hover:shadow-xl hover:shadow-[0_0_40px_rgba(34,197,94,0.7)] transition-all cursor-pointer border-[3px] border-gray-200 dark:border-[#22c55e] hover:border-green-500 dark:hover:border-[#4ade80]">
               <TreePine className="w-12 h-12 text-green-600 dark:text-[#22c55e] mx-auto mb-4" {...iconProps} />
@@ -66,6 +66,36 @@ export default function Home() {
               <h2 className="text-xl font-semibold text-center mb-2 dark:text-[#22c55e]">Mapa</h2>
               <p className="text-gray-600 dark:text-slate-300 text-center text-sm">
                 Zobacz rozmieszczenie drzew na mapie
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/add-project">
+            <div className="bg-white dark:bg-slate-800/80 dark:backdrop-blur rounded-[2rem] shadow-lg dark:shadow-[0_0_30px_rgba(34,197,94,0.5)] p-8 hover:shadow-xl hover:shadow-[0_0_40px_rgba(34,197,94,0.7)] transition-all cursor-pointer border-[3px] border-gray-200 dark:border-[#22c55e] hover:border-green-500 dark:hover:border-[#4ade80]">
+              <FolderPlus className="w-12 h-12 text-green-600 dark:text-[#22c55e] mx-auto mb-4" {...iconProps} />
+              <h2 className="text-xl font-semibold text-center mb-2 dark:text-[#22c55e]">Dodaj Projekt</h2>
+              <p className="text-gray-600 dark:text-slate-300 text-center text-sm">
+                Utwórz nowy projekt nasadzeń
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/projects">
+            <div className="bg-white dark:bg-slate-800/80 dark:backdrop-blur rounded-[2rem] shadow-lg dark:shadow-[0_0_30px_rgba(34,197,94,0.5)] p-8 hover:shadow-xl hover:shadow-[0_0_40px_rgba(34,197,94,0.7)] transition-all cursor-pointer border-[3px] border-gray-200 dark:border-[#22c55e] hover:border-green-500 dark:hover:border-[#4ade80]">
+              <List className="w-12 h-12 text-green-600 dark:text-[#22c55e] mx-auto mb-4" {...iconProps} />
+              <h2 className="text-xl font-semibold text-center mb-2 dark:text-[#22c55e]">Lista Projektów</h2>
+              <p className="text-gray-600 dark:text-slate-300 text-center text-sm">
+                Przeglądaj i zarządzaj projektami
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/species">
+            <div className="bg-white dark:bg-slate-800/80 dark:backdrop-blur rounded-[2rem] shadow-lg dark:shadow-[0_0_30px_rgba(34,197,94,0.5)] p-8 hover:shadow-xl hover:shadow-[0_0_40px_rgba(34,197,94,0.7)] transition-all cursor-pointer border-[3px] border-gray-200 dark:border-[#22c55e] hover:border-green-500 dark:hover:border-[#4ade80]">
+              <Leaf className="w-12 h-12 text-green-600 dark:text-[#22c55e] mx-auto mb-4" {...iconProps} />
+              <h2 className="text-xl font-semibold text-center mb-2 dark:text-[#22c55e]">Gatunki Drzew</h2>
+              <p className="text-gray-600 dark:text-slate-300 text-center text-sm">
+                Zarządzaj gatunkami drzew
               </p>
             </div>
           </Link>

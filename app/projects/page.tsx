@@ -29,9 +29,17 @@ export default function ProjectsPage() {
     try {
       const response = await fetch('/api/projects');
       const data = await response.json();
-      setProjects(data);
+      
+      // Sprawdź czy data jest tablicą
+      if (Array.isArray(data)) {
+        setProjects(data);
+      } else {
+        console.error('API returned non-array data:', data);
+        setProjects([]);
+      }
     } catch (error) {
       console.error('Error loading projects:', error);
+      setProjects([]);
     } finally {
       setLoading(false);
     }

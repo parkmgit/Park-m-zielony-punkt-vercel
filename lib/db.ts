@@ -230,11 +230,6 @@ async function insertDefaultData() {
       await query('INSERT INTO users (name, role, email, password_hash) VALUES (?, ?, ?, ?)', ['Anna Nowak', 'pracownik', 'anna.nowak@park-m.pl', passwordHash]);
       await query('INSERT INTO users (name, role, email, password_hash) VALUES (?, ?, ?, ?)', ['Piotr Wiśniewski', 'pracownik', 'piotr.wisniewski@park-m.pl', passwordHash]);
 
-      // Insert default sites
-      await query('INSERT INTO sites (code, name, address) VALUES (?, ?, ?)', ['BUD-001', 'Park Centralny', 'ul. Parkowa 1, Warszawa']);
-      await query('INSERT INTO sites (code, name, address) VALUES (?, ?, ?)', ['BUD-002', 'Osiedle Zielone', 'ul. Kwiatowa 15, Kraków']);
-      await query('INSERT INTO sites (code, name, address) VALUES (?, ?, ?)', ['BUD-003', 'Skwer Miejski', 'ul. Główna 50, Wrocław']);
-
       // Insert default species
       await query('INSERT INTO species (name, scientific_name) VALUES (?, ?)', ['Dąb szypułkowy', 'Quercus robur']);
       await query('INSERT INTO species (name, scientific_name) VALUES (?, ?)', ['Klon zwyczajny', 'Acer platanoides']);
